@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <base target="_top">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สำรวจวันหยุด OM</title>
+</head>
+<body>
+    <iframe id="gasFrame" style="width: 100%; height: 100vh;" scrolling="yes" frameborder="0"></iframe>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const page = urlParams.get('page');
+        const baseUrl = "https://script.google.com/macros/s/AKfycbwg5yqqF00ejRvjFHOyZfx-z2cem-bZ6ViKkBYBMQyJdCC8w1gXXjJXaiQXiXBczPhO/exec";
+        
+        if (page) {
+            document.getElementById('gasFrame').src = baseUrl + "?page=" + page;
+        } else {
+            document.getElementById('gasFrame').src = baseUrl;
+        }
+    </script>
+</body>
+</html>
